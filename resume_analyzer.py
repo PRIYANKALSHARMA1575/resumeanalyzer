@@ -3,7 +3,7 @@ import google.generativeai as genai
 import PyPDF2
 
 # Configure the Gemini API with your key
-genai.configure(api_key=st.secrets["AIzaSyAVhAs77WZqRctKpN-3VlleDwskUxQtqd4"])  # Replace with your actual API key
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])  # Replace with your actual API key
 model = genai.GenerativeModel('gemini-2.5-pro')  # Use the latest model
 
 # Streamlit UI Configuration
@@ -64,3 +64,4 @@ if uploaded_file is not None:
 else:
 
     st.warning("Please upload a PDF file to analyze.")
+
